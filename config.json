@@ -1,0 +1,7 @@
+{
+"robotqq": "",
+ "masterqq": ,
+ "socketio_url": "http://0.0.0.0:8888/",
+ "socketio_path": "/socket.io",
+ "webapi_url": "http://0.0.0.0:8888/v1/LuaApiCaller"
+}
