@@ -27,3 +27,5 @@ pyiotqq接口：https://github.com/golezi/pyiotqq
 论语：https://www.douban.com/group/topic/64087338/?author=1
 
 骂人api：nmsl.shadiao.app
+
+狗屁不通生成器（未接入）：https://github.com/menzi11/BullshitGenerator
