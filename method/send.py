@@ -15,6 +15,8 @@ def send(x,qqhao=masterqq):
     if type(x)==str:
         if x[0:6]=='/P I C':
             webapi.send_friend_pic_msg(qq=qqhao, pic_url=x[6:])
+        elif x[0:6]=='/VOICE':
+            webapi.send_friend_voice_msg(qq=qqhao, voiceUrl=x[6:])
         else:
             webapi.send_friend_text_msg(qq=qqhao, content=x)
     elif type(x)==int:
@@ -42,3 +44,6 @@ def groupsend(x,qqhao=masterqq):
             sleep(1)
     else:
         pass
+
+def shutup(groupid,shutupid,time=10):
+    return webapi.shut_up(groupid,shutupid,time)

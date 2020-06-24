@@ -15,3 +15,4 @@ class fool(object):
     @property
     def nmsl(self):
         return requests.get('https://nmsl.shadiao.app/api.php').text
+    
