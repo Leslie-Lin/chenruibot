@@ -107,7 +107,18 @@ class IotqqWebapi:
 
     def send_group_voice_msg(self, group_id: int, voiceUrl: str):
         self._send_voice_msg(toUser=group_id, sendToType=2, voiceUrl=voiceUrl)
-
+    def shut_up(self, group_id: int, shut_up_id: int, shut_up_time: int):
+        params = (
+        ('qq', self.robotqq),
+        ('funcname', 'OidbSvc.0x570_8'),
+        )
+        headers = {
+        'Content-Type': 'application/json',
+        }
+        data = {"GroupID": group_id, "ShutUpUserID": shut_up_id, "ShutTime": shut_up_time}
+        print(json.dumps(data))
+        response = requests.post(self.api_url, headers=headers,params=params, json=data)
+        return response
     # atUsers:list 要艾特的成员的qq号,qq号类型为str 如 ["123456","666666"]
     # content: 一连串艾特后面的消息内容
     def send_at_msg(self, group_id: int, atUsers: list, content: str = " "):
